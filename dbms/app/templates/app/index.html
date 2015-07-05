@@ -1,110 +1,169 @@
-<!DOCTYPE html>
 {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-        {% load staticfiles %}
-        <title>DBMS</title>
-        <link rel="stylesheet" href="{% static "css/showup.css" %}">
-        {% block pagelibraries %}{% endblock %}
+<head>
+    <meta charset="utf-8">
+    <title>IIIT Delhi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="IIITD" />
+    <!-- css -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" />
+    <link href="{% static "css/style.css" %}" rel="stylesheet" />
+    <!-- Theme skin -->
+    <link href="{% static "skins/default.css" %}" rel="stylesheet" />
 
-        <link href="{% static "css/bootstrap.min.css"%}" rel="stylesheet">
-        <link href="{% static "css/ripples.min.css" %}" rel="stylesheet">
-        <link href="{% static "css/material-wfont.min.css" %}" rel="stylesheet">
-    </head>
-    <body>
-     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
 
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">DBMS</a>
-      </div>
+<body>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
+    <div id="wrapper">
+        <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">
+                            <a href="http://iiitd.ac.in" target="_blank"><img src="http://iiitd.ac.in/sites/default/files/images/graphicidentity/logo/style3colorsmall.jpg" /></a>
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
 
-          <li><a id="feedback" href="/customer">New Customer</a></li>
-           <li><a id="feedback" href="/employee">New Employee</a></li>
-            <li><a id="feedback" href="/part">New Part</a></li>
-             <li><a id="feedback" href="/order">New Order</a></li>
-              <li><a id="feedback" href="/orderpart">New Part_Order</a></li>
-          </ul>
-      </div><!-- /.navbar-collapse -->
-    </div>
-    </nav>
-    <a href="#" style="right: 70px;" class="btn back-to-top btn-dark btn-fixed-bottom"> <span class="glyphicon glyphicon-chevron-up"></span> </a>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/agenda">agenda</a></li>
+                            <li><a href="http://goo.gl/forms/ssFhbZBv9K" target="_blank">Register</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
 
-    <div class="container">
-<br/>
-<form class="text-center well well-sm" action="/query/" method="POST" enctype="text/plain">
-	<input type="text" name="sql" placeholder="Enter any SQL Query!" />
-	<input class="btn" type="submit" value="Search" />
-</form>
-{% block content %}
-<div >
-	<h2>Customers</h2>
-	{% for x in customers %}
-	
-	<li><a href="/customer/{{x.pk}}">{{x}}</a>  <a href="/customer/{{x.pk}}/delete/">X</a></li> 
-	{% endfor %}
+        {% block content %}
+        <div class="big-cta">
+            <div class="cta-text">
+            <br/>
+                <h2><span>CS</span> Teachers Training Program 2015</h2>
+                <h4>1st August - 16th August 2015 (Saturdays)</h4>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <section class="callaction">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="big-cta">
+                            <div class="cta-text">
+                                <h3 align="left">About the Workshop</h3>
+                                <p align="left"><b>
+					IIIT Delhi is organizing a workshop for Computer Science teachers in schools in the NCR region. The workshop aims to provide school teachers with pedagogical tools that may help improve the teaching of Computer Science. A second objective of the workshop is to provide a forum for teachers to exchange ideas for projects, and discuss technological issues. The workshop will start with following the NCERT syllabus, covering basic data structures, algorithms and programming concepts. The workshop will also include some advanced topics, as well as a forum for discussion on future careers in Computer Science and related fields. The workshop will be conducted by faculty from IIT Delhi, IIIT Delhi, Delhi University and engineers from Google. Each session of the workshop will consist of a lecture session followed by a programming lab. Registration for the workshop is free, but mandatory.
+					<br/><br/>
+					The teachers or schools who wish to attend the workshop must register <a href="#">here</a>.</b>
+					</p>
+                            </div>
+                            <br/>
+                            
+                            <h3>Objectives</h3>
+                            <p>
+1. Improve understanding of core concepts of computer science.<br/>
+2. Provide a  forum to discuss pedagogical issues.<br/>
+4. Learn about applications of Computer Science.<br/>
+</p>
+                            
+                            <br/>
+                            <h3>Instructors</h3>
+                            <hp>
+Faculty from IIT Delhi, IIIT Delhi, Delhi University and engineers from Google.
+</p>
+                           
+                            <br/>
+                            <h3>Contact</h3>
+                            <p>
+Dr. Rajiv Raman <a href="mailto:rajiv@iiitd.ac.in">rajiv@iiitd.ac.in</a>
+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="widget">
+                            <h5 class="widgetheading">Location</h5>
+                            <address>
+                                <strong>IIIT - Delhi </strong>
+                                <br> Okhla Industrial Estate,Phase III
+                                <br/>(Near Govind Puri Metro Station)
+                                <br> New Delhi, Delhi 110020
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="widget">
+                            <h5 class="widgetheading">Links</h5>
+                            <ul class="link-list">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/agenda">Agenda</a></li>
+                                <li><a href="http://goo.gl/forms/ssFhbZBv9K" target="_blank"> Register</a></li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="widgetheading" style="text-align:center">Sponsored by Google</h5>
+                        <!-- <span style="margin-left:15px;"><a href= "http://www.codechef.com/school/goforgold" target="_blank"><img height="150em" width="250em" src="https://codechef_shared.s3.amazonaws.com/download/school_images/gfg_school_banner.jpg" /></a><span style="">
+					<span style="margin-left:15px;"><a href="http://www.iarcs.org.in/" target="_blank"><img height="150em" width="250em" src="http://www.iarcs.org.in/atva2012/images/iarcs-logo.jpg"/></a></span> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                Designed by <a href="mailto:naman13064@iiitd.ac.in">Naman</a>
+                <div class="row pull-right"><span>&copy; IIIT-Delhi</div>
+			</div>
 
+	</footer>
 </div>
-<div >
-	<h2>Employees</h2>
-	{% for z in employees %}
-	
-	<li><a href="/employee/{{z.pk}}">{{z}}</a>    <a href="/employee/{{z.pk}}/delete/">X</a></li> 
-	{% endfor %}
-</div>
-<div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static "js/jquery.js" %}" ></script>
+<script src="{% static "js/jquery.easing.1.3.js"%}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.pack.js" %}"></script>
+<script src="{% static "js/jquery.fancybox-media.js" %}"></script>
+<script src="{% static "js/google-code-prettify/prettify.js" %}"></script>
+<script src="{% static "js/portfolio/jquery.quicksand.js" %}"></script>
+<script src="{% static "js/portfolio/setting.js" %}"></script>
+<script src="{% static "js/jquery.flexslider.js" %}"></script>
+<script src="{% static "js/animate.js" %}"></script>
+<script src="{% static "js/custom.js" %}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-55112650-1', 'auto');
+  ga('send', 'pageview');
 
-	<h2>Parts</h2>
-	{% for p in parts %}
-	
-	<li><a href="/part/{{p.pk}}/">{{p}}</a>  <a href="/part/{{p.pk}}/delete/">X</a></li>
-	{% endfor %}
-
-</div>
-<div >
-
-	<h2>Orders</h2>
-	 
-	{% for y in orders %}
-		<li><a href="/order/{{y.pk}}/">{{y}}</a> {{parts_for_order}}<a href="/orderpart">+</a> <a href="/order/{{y.pk}}/delete/" style="margin-left:2em"> X</a></li>
-		
-	{% endfor %}
-</div>
-{% endblock %}
-</ul>
-</div>
-	<script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
-         <script src="{% static "js/showup.js" %}"></script>
-        <script src="{% static "js/bootstrap.min.js" %}"></script>
-             <script src="{% static "js/ripples.js" %}"></script>
-             <script src="{% static "js/material.min.js" %}"></script>
-
-    <script>
-              $().showUp('.navbar', {
-              upClass: 'navbar-show',
-              downClass: 'navbar-hide'
-              });
-      </script>
-
-
-        <script>
-            $(document).ready(function() {
-                $.material.init();
-            });
-        </script>
-    </body>
+</script>
+</body>
+</html>
