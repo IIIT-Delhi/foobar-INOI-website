@@ -11,8 +11,8 @@ def index(request):
 	return render(request,'app/index.html')
 
 
-def agenda(request):
-	return render(request,'app/agenda.html')
+# def agenda(request):
+# 	return render(request,'app/agenda.html')
 
 # select * from app_customer where lname="Gupta"
 # select * from 

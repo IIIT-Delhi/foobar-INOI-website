@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
-	url(r'^agenda/$', views.agenda),
+	# url(r'^agenda/$', views.agenda),
 	# url(r'^customer/(?P<cid>\d+)/$', views.customer_edit),
 	# url(r'^customer/(?P<cid>\d+)/delete/$', views.customer_delete),
 	# url(r'^employee/$', views.newemployee),
